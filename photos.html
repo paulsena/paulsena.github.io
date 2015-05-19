@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet" />
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -27,6 +28,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 
 </head>
 
@@ -71,21 +73,6 @@
     </nav>
 
 
-    <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.intro-header -->
 
     <!-- Page Content -->
 
@@ -99,14 +86,9 @@
                     <br/>
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading"><a href="aboutme.html">About Me</a></h2>
-                    <p class="lead">Experienced and versatile mid and back end developer with front end experience.  Passion for new technologies and constant personal growth.  Software development & technology is not a job for me, it's a passion that drives me.  Everyday I look for opportunities to hone my craft and constantly push myself to learn new things.  My goal is to eventually be a successful entrepreneur in the field.  If you are looking for key members to found a startup, please reach out to me.
-<p>Specialties: Integrations, Web Services, Developing N Tier Applications,  Javascript, C#, Java, .NET, SOA Design, Reverse Engineering</p>
-<p>Current Side Projects & Interests:  Node.js, Python, Android Wear, Meteor.js</p>
-</p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/projects.png" alt="">
+                    <a data-lightbox="test" href="img/projects.png"><img class="img-responsive" src="img/projects.png" ></a>
                 </div>
             </div>
 
@@ -178,10 +160,13 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <!-- <script src="js/jquery.js"></script> -->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
 
 </body>
 

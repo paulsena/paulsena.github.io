@@ -19,7 +19,7 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <!--<link href="css/fonts.css" rel="stylesheet" type="text/css">-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,7 +30,7 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar-default" >
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
@@ -72,13 +72,16 @@
 
 
     <!-- Header -->
-    <a name="about"></a>
     <div class="intro-header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
                         <h1>Create. &nbsp Love. &nbsp Experience. &nbsp Explore.</h1>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <img src="img/profile.jpg" class="img-circle"/ width="150px">
                         <h3>The personal site of Paul Senatillaka</h3>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
@@ -103,33 +106,36 @@
 
     <!-- Page Content -->
 
-	<a  name="services"></a>
-    <div class="content-section-b">
-
+	
+    <div class="content-section-b" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                <div class="col-lg-12 col-xs-12">
                     <br/>
                     <br/>
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading"><a href="aboutme.html">About Me</a></h2>
-                    <p class="lead">Experienced and versatile mid and back end developer with front end experience.  Passion for new technologies and constant personal growth.  Software development & technology is not a job for me, it's a passion that drives me.  Everyday I look for opportunities to hone my craft and constantly push myself to learn new things.  My goal is to eventually be a successful entrepreneur in the field.  If you are looking for key members to found a startup, please reach out to me.
-<p>Specialties: Integrations, Web Services, Developing N Tier Applications,  Javascript, C#, Java, .NET, SOA Design, Reverse Engineering</p>
-<p>Current Side Projects & Interests:  Node.js, Python, Android Wear, Meteor.js</p>
-</p>
+                    <h5 class="alert alert-success" style="text-align:center;">Currently accepting job offers</h4><br/>
+                    <p class="lead">Software developer, musician, traveler, photographer.</p>
+                    <p >Hi, I'm Paul.  I'm a versatile software developer with lots of full stack experience.  In the past I've specalized in Mid and Back end development in Javascript, C#, and Java.  I'm also an expert in Integration and Web Services (SOA). Currently, I'm interested in learning Big Data and Javascript frameworks (Node.js, Angluar).  I've also always had a side passion for electronics based projects and robotics.  My future learning topics include AI, ML, and NLP.</p>
+                    <p>Ever since I was a kid, I've been fasinated with science, technology, and how things work.  I started programming with Qbasic games when I was 12 years old.  I've been working in the Computer industry since 2005. In 2009, I went back to University of Massachusetts as a non traditional full time student and graduated in 2012 with honors which was a great accomplishment for me.</p>
+                    <p>Currently based in Boston, MA</p>
+                    <br/>
+                    <a class="btn btn-primary" href="https://www.linkedin.com/in/paulsena" target="_blank"><i class="fa fa-pencil fa-fw"></i> Resume</a>
                 </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+
+                <!--<div class="col-lg-5 col-sm-pull-6  col-sm-6">
                     <img class="img-responsive" src="img/projects.png" alt="">
-                </div>
+                </div>-->
             </div>
 
         </div>
         <!-- /.container -->
     </div>
-    <!-- /.content-section-a -->
+    <!-- /.content-section-b -->
 
-    <div class="content-section-a">
+    <div class="content-section-a" id="projects">
             
         <div class="container">
             <div class="row">
@@ -140,7 +146,8 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading"><a href="projects.html">Projects</a></h2>
                     <p class="lead">A various assembly of personal and academic projects.<br/>
-                        Electronic, Software, and Music.</p>
+                        Software, Electronic, and Music.</p>
+                    <a class="btn btn-primary" href="projects.html">Projects Page</a>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/projects.png" alt="">
@@ -153,7 +160,7 @@
     </div>
     <!-- /.content-section-a -->
 
-    <div class="content-section-b">
+    <div class="content-section-b" id="photos">
 
         <div class="container">
 
@@ -179,7 +186,7 @@
     </div>
     <!-- /.content-section-b -->
 
-    <div class="content-section-a">
+    <div class="content-section-a" id="blog">
 
         <div class="container">
 
@@ -189,22 +196,23 @@
                     <br/>
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading"><a href="blog.html">Blog</a></h2>
-                    <p class="lead">Thoughts and musings of a Brogrammer and a Human.</p>
+                    <h2 class="section-heading"><a href="http://paulsena.tumblr.com">Blog</a></h2>
+                    <p class="lead">Thoughts and musings of a Brogrammer.</p>
+                    <a class="btn btn-primary" href="http://paulsena.tumblr.com" target="_blank">Tumblr</a>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/phones.png" alt="">
                 </div>
             </div>
 
+        <br/><br/><br/><br/><br/><br/><br/>
         </div>
         <!-- /.container -->
-
     </div>
     <!-- /.content-section-a -->
 
-	<a  name="contact"></a>
-    <div class="banner">
+
+    <div class="banner" id="contact">
 
         <div class="container">
 
@@ -224,6 +232,12 @@
                             <a href="https://twitter.com/paulsena" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                         </li>
                     </ul>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <br/>
+                        <p class="lead"><b>Email me at</b> paulsena at gmail com</p>
+                      </div>
+                    </div>
                 </div>
             </div>
 

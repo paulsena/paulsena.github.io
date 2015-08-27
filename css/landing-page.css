@@ -169,3 +169,34 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+
+/*Testimonial Carousel*/
+#testimonials-row .carousel-inner{
+    height: 220px;
+}
+.quoteCite {
+    font-weight: bold;
+}
+
+.carousel-indicators li {
+  background-color: #999;
+  background-color: rgba(70,70,70,.25);
+}
+
+.carousel-indicators .active {
+  background-color: #444;
+}
+
+.carousel-indicators {
+    position:relative;
+    bottom: 0px;
+    padding-top: 5px;
+}
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+    top:80%;
+}
+
+.carousel-control .glyphicon {
+    color: rgba(133, 129, 129, 0.69);
+}

@@ -1,9 +1,8 @@
- function kayakItForThem() {
+ function kayakItForThem(searchString) {
 //  if ($.getQueryString({ id: "fwd" })) redirect();
   fakeMouse = $("#fakemouse");
   inputField = $("#wherebox");
   searchButton = $("#fdimgbutton");
-  searchString = "Boston, MA";
 
   $("body").css("cursor", "wait");
   fakeMouse.show();
@@ -14,7 +13,7 @@
     left: inputField.offset().left + 10
   }, 1500, 'swing', function(){
     inputField.focus();
-    fakeMouse.animate({ top: "+=18px", left: "+=10px" }, 'fast');
+    fakeMouse.animate({ top: "+=18px", left: "+=12px" }, 'fast');
     type(searchString, 0);
   });
 
@@ -34,6 +33,7 @@
     top:  searchButton.offset().top + 15,
     left: searchButton.offset().left + 30
   }, 1500, 'swing', function(){
+    //searchButton.click();
     window.location.href = "https://www.kayak.com/hotels/Boston,MA-c25588/2015-10-16/2015-10-18";
   });
   }
@@ -45,4 +45,12 @@
   function gentlyDecode(e) {
       return decodeURIComponent ? decodeURIComponent(e) : unescape(e)
   }
+
 }
+
+  function getURLParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }

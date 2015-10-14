@@ -3,10 +3,11 @@
   fakeMouse = $("#fakemouse");
   inputField = $("#wherebox");
   searchButton = $("#fdimgbutton");
+  instructions = $("#instructions");
 
   $("body").css("cursor", "wait");
   fakeMouse.show();
-  //instruct("play.step_1");
+  instruct("step_1");
 
   fakeMouse.animate({
     top:  inputField.offset().top + 15,
@@ -44,6 +45,21 @@
 
   function gentlyDecode(e) {
       return decodeURIComponent ? decodeURIComponent(e) : unescape(e)
+  }
+
+  function instruct(step){
+    var msg="";
+    switch(step) {
+      case:"step_1":
+        msg="Enter Your Destination";
+        break;
+      case:"step_2":
+        msg="Click Search"
+        break;
+      default:
+    } 
+    instructions.value = msg;
+
   }
 
 }

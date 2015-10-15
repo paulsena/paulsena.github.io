@@ -1,0 +1,41 @@
+	/*
+	https://pixel.mathtag.com/event/img?mt_id=784996&mt_adid=110216&v1=&v2=&v3=&s1=&s2=&s3=
+	https://sp.analytics.yahoo.com/spp.pl?a=10001139842385&.yp=8565&js=no
+	https://secure.leadback.advertising.com/adcedge/lb?site=695501&srvc=1&betr=34962=770002[720]
+	*/
+
+	var mm_ri = String( Math.random() );
+	mm_ri = mm_ri.replace( /0\./g,'' );
+
+	var mm_protocol = location.protocol;
+	if ( mm_protocol != 'http:' && mm_protocol != 'https:' ){ mm_protocol = 'http:'; }
+
+	var mm_el0 = document.createElement('img');
+	var url0 = 'pixel.mathtag.com/event/img?mt_id=784996&mt_adid=110216&v1=&v2=&v3=&s1=&s2=&s3=';
+	url0 = url0.replace("\[RANDOM_NUMBER\]", mm_ri);
+	mm_el0.width = 1;
+	mm_el0.height = 1;
+	mm_el0.src = mm_protocol + '//' + url0;
+
+	var mm_el1 = document.createElement('img');
+	var url1 = 'sp.analytics.yahoo.com/spp.pl?a=10001139842385&.yp=8565&js=no';
+	url1 = url1.replace("\[RANDOM_NUMBER\]", mm_ri);
+	mm_el1.width = 1;
+	mm_el1.height = 1;
+	mm_el1.src = mm_protocol + '//' + url1;
+
+	var mm_el2 = document.createElement('img');
+	var url2 = 'secure.leadback.advertising.com/adcedge/lb?site=695501&srvc=1&betr=34962=770002[720]';
+	url2 = url2.replace("\[RANDOM_NUMBER\]", mm_ri);
+	mm_el2.width = 1;
+	mm_el2.height = 1;
+	mm_el2.src = mm_protocol + '//' + url2;
+
+//used to sync advertiser without leaking referer to final destination
+	    var frm = document.createElement('iframe');
+	    frm.style.visibility = 'hidden';
+	    frm.style.display = 'none';
+	    frm.src = "https://pixel.mathtag.com/sync/iframe?01AD=3mpwyJEbw70FZnEpbTuhdSvg9qpgifFjUqsOiyYbzaUG5vNa6KZctgQ&01RI=AD0242CA13194A6&01NA=na&mt_adid=110216&v1=undefined&v2=undefined&v3=hotel&v4=undefined&v5=undefined&v6=undefined&v7=undefined&s1=sPHpMTclYJBtO-AikXJ_5YMdvNk&s2=undefined&s3=undefined,undefined&s4=undefined,undefined&s5=US&s6=DId4NKFiwi13g-XX8nQToJhLSsk&s7=kayak&mm_bnc&mm_bct&mathid_data=%7B%22dv1%22%3A%22TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV09XNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS80NS4wLjI0NTQuMTAxIFNhZmFyaS81MzcuMzY%3D%22%2C%22dv2%22%3A%22NWI2NjgwZjU1ZmFiYmMxM2YxMGMwMDgyNTM4NjQ0OTk%3D%22%2C%22dv3%22%3A%22MWEwMGI1ZmQ0NGYyYmYxOTRhZjBjMjFkZDJiM2JlODg%3D%22%2C%22dv4%22%3A%22MzQ0MHwxNDQwfDMzNjF8MTQ0MHwyNHx8%22%2C%22dv5%22%3A%22QW1lcmljYS9OZXdfWW9yaw%3D%3D%22%2C%22dv6%22%3A%22%22%2C%22dv7%22%3A%22MA%3D%3D%22%2C%22dv8%22%3A%22dHJ1ZXx0cnVlfHRydWU%3D%22%2C%22dv9%22%3A%22fGVuLVVTfA%3D%3D%22%2C%22dv10%22%3A%22TW96aWxsYXxOZXRzY2FwZXxXaW4zMnw%3D%22%7D&mt_uuid=251a5570-5d60-4c00-9273-0f1eae28ad1e&no_iframe=1";
+	    document.body.appendChild(frm);
+      
+window.MathIDSet = 'zQsmTsuHgdLyVEjHllHl0EsPsh36pgYgSu5Nzl86VtdKOkzksQQGYYxLpiOvnlpaU9I5OzK+GK5ce/vpzxV3+B1/J9E9WQq/wShdCNvva6F6AGTU1JCvVObgqikSgIICsekAJj/PbOQP07d6iQa9nw==';

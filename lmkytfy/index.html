@@ -1659,7 +1659,229 @@ If there is a warning bar:<br>
 </div>
 <iframe name="mapframe" id="mapframe" frameborder="0" scrolling="no" height="1" width="1" style="display: none" src="javascript:void(0)"></iframe>
 <div style="background-color: transparent" id="ttipDL"></div>
-
+<script type="text/javascript" src="./Kakay2_files/r9alien.js"></script>
+<script type="text/javascript" src="./Kakay2_files/r9.js"></script>
+<script type="text/javascript" src="./Kakay2_files/streaming.js"></script>
+<script type="text/javascript" src="./Kakay2_files/fdcommon.js"></script>
+<script type="text/javascript" src="./Kakay2_files/FdMoreFilters.js"></script>
+<script type="text/javascript" src="./Kakay2_files/Form.js"></script>
+<script type="text/javascript" src="./Kakay2_files/r9widgets.js"></script>
+<script type="text/javascript">
+var R9Anon = true;
+var isSuppressLogin = false;
+var StartTab = "hotels";
+var isSeoPage = false; var isSemPage = false; window.inlineFormCmp2Enabled = false;
+var CMP2REQUIREDEST = true;
+R9 = R9 || {};
+R9.extend('globals', {"facebookAppId":"163003079204","uiconfig":{"ui.quickLinks":"false","ui.hotel.maps.showAvuxi":"true","ui.cmp2.forceUsePreCheckItems":"true","ui.flight.smarty-history":"true","ui.maps.InfoBox.alignBottom":"false","ui.swoodoo.new.fd.grey":"true","ui.cmp2.improved.page_origin":"true","ui.flight.priceline-afterclick.enabled":"true","ui.swoodoo.new.fd.blue":"false","ui.error.logging.streamer.timeout":"true","ui.hotel.smarty-history":"true","ui.limitedCubaSupport":"false","ui.background.white":"false","ui.car.smarty-history":"true","ui.flight.frp.explore.enabled":"false","ui.cmp2.prefix":"CMP2_","ui.display.provider.language":"false","ui.sanctioned.countries.readmore.popup.enabled":"false","ui.afterclick.rate_limited_occurrence":"2","ui.hotel.landmarksSmarty.flareSmartyType":"25","ui.hotel.inline.urgencyMessaging.enabled":"true","ui.flight.result.minimal":"false","ui.hotel.filters.mergeFreebiesAndPriceSection":"true","ui.car.hotwire-afterclick.enabled":"true","ui.maps.style":"MapHRPStyle","ui.intentmedia.url":"//a.cdn.intentmedia.net/javascripts/intent_media_kayak.js","ui.filterstate.signup.upsell":"true","ui.hotel.fdSmarty.flareSmartyType":"30","ui.paymentfee.max.baggage":"3","ui.sem.hotels.overlay.mvc":"true","ui.cmp2.maxPreChecks":"2","ui.flight.fd.explore.enabled":"false","ui.afterclick.rate_limited":"true","ui.hotel.result.swappedLayout":"true","ui.cars.newstyling":"false","ui.cmp2.checkOnlyAirportCode":"false","ui.login.promoDialog":"true","ui.swoodoo.new.fd.white":"false","ui.paymentfee.popover.width":"265","ui.timefilterswitch":"false","ui.datepicker.year.symbol":"${nucleus.ui.features.DATE_PICKER_YEAR_SYMBOL}","ui.error.logging.streamer":"true","ui.intentmedia.enabled":"true","ui.datepicker.reverse.order.month.year":"false","ui.hotel.vsSubPage":"true","ui.background.blue":"true","ui.paymentfee.bubbleHideTimeout":"30","ui.cmp2.code.refactor":"true","ui.hackerfares.refresh.enabled":"true","ui.ga.forceOff":"false","ui.swoodoo.new.fd":"true","ui.package.expedia-afterclick.enabled":"true","ui.cmp2.small.cookie":"true","ui.submitpreload":"true","ui.hotel.booking-afterclick.enabled":"true","ui.hotels.showDetailLinkOnHover":"false","ui.hotel.photoFlickerFix":"true","ui.cmp2.limitPreChecks":"false","ui.s14":"true","ui.cmp2.changeAirportName":"true","ui.social.forceOff":"false"},"searchCount":7,"_PRICE_THOUSANDS_SEPARATOR":"","locale":{"loc":"en_US","lc":"en","lc_cc":"US"},"site_currency":"USD","platform":"bb","browserCapabilities":{"useNewSession":"true","swapper":"true","overlayItems":"false","limited":"false","animation":"true","workaround":"Swapper","rightRailsCompareAllButton":"false","filter":"true","selfClosingUrl":"/s/compareresults/close","unloadCloseWindows":"true","maxCheckedItems":"1","closeOnUnCheck":"true","popUnderMethod":"back-tab","cmp2BlackList":"LasVegas.com,Agoda,Drivy,Delta,Virgin America"},"googleClientId":"446009525344-j420p21u4ap0114qr1fnrk8bhq4f2il1.apps.googleusercontent.com","_RIGHT_CURSYMBOL":"","googleCookiePolicy":"http://www.kayak.com","presentation":"web","analytics":{"vslog":{"trackPageView":"true","trackEvent":"true"},"pixelContext":{"obfuscatedTrackingCookie":"VR4ro8SIrAIYi6Kf4Rpc4k_X3nA","pageType":"front door","vertical":"hotel","sem":false,"site_currency":"USD","obfuscatedSessionId":"aX6Cr6wyLdM_oq16so5eP1yvQec"},"google":{"trackPageView":"true","trackEvent":"true","tid":"UA-42209185-8"},"vertical":"main","pageId":"frontdoor"},"formtoken":"7_FfIHzR6zurg0ZK1RXd3D7pCaZ3FtjiUoVYuKqggrE-jnOrIk0lk5BjgV$jIooo7D3_bdSG5cVEGi3UpJA2Xdc","useDefaultNavigation":"true","affiliateskin":"kayak","_LEFT_CURSYMBOL":"$","experiment":"aircanadawhisky-c,cars-remove-distance-filter-c,hackerfares-refresh,hotel-xsell-bdcstyle-c,hrp-tablinks,segmentranking_v2-c,seo_city_hotels_conversion_rate_optimization_header_body-c,usdomestic-timeout-c,webjet-enabled,whisky-urgency_timer","submitTimeout":0,"adsRefreshTimer":5000,"ignoreUrlRoutes":["^\\/?hotels.*?-details\\/.*?$"],"affiliate":"kayak"});
+R9.extend("globals", {vertical: "hotels"});
+R9.extend("globals",{
+useFullSearchUrl: false,
+isTouch: jq.support.touch || typeof(window.ontouchstart) != "undefined",
+isSeo: false,
+intentMediaSiteName: "KAYAK",
+blueKaiFilterEvents: true,
+reverseDatePickerMonthAndYear: '',
+canLogin: true,
+isLoggedIn: !true ,
+showForcedSignup : false && true && "" != "true",
+showForcedSignupForFilters : true && true && "true" != "true",
+loadMoreMenuAjax: true
+});
+R9.Alien.Moment.setupLocale(R9.globals.locale, moment, {
+week : {
+dow : 1 - 1, doy : 4 }
+});
+R9.extend('URL.Generator.prototype.options', {
+maxLegs: 6,
+useCleanUrls: true
+});
+R9.extend('RP.InlineForm.prototype.options', {
+message: "Starting new search..."
+});
+AjaxReg.remoteHost = "https://www.kayak.com";
+R9.extend('cmp2', {
+useInterstitialPage: true,
+suppressKAYAKCompareToPopup: false ,
+noOpenPopunders: false,
+useReserveWindows: false,
+popupBlockerMessageEnabled: true,
+queuePopups: true,
+tileWindows: true
+});
+R9.extend('ccfeecalculator', {
+attachCCFeeCalcNoticeTooltip: false,
+enableExtraFees: false || false
+});
+R9.extend('login', {
+newform: false
+});
+R9.extend('Tabs.SearchTabs.prototype.options', {
+message: "Loading results..."
+});
+R9.extend('CountryCurrencyPicker', {
+'config' : {
+'sparkle.affiliate.countrypicker.currency.showSaveToProfileDialog' : true,
+'nucleus.ispfilter.newRedirect' : true
+}
+});
+window.R9App = window.R9App || {};
+if (!window.R9App.AppInstance) {
+var appOptions = {
+useClientCache: ("false" !== R9.globals.useClientCache),
+cacheInitialPage: ("true" === R9.globals.cacheInitialPage),
+useDefaultNavigation: ("true" === R9.globals.useDefaultNavigation),
+maxCacheEntrySize: 10,
+maxCacheTTL: 15*60*1000,
+ignoreUrls: R9.globals.ignoreUrlRoutes || []
+};
+window.R9App.AppInstance = new R9.App.Application(appOptions);
+// cache the page at the end of streaming
+if (appOptions.useClientCache && appOptions.cacheInitialPage) {
+jq(window).bind('r9.streaming.done', function() {
+window.R9App.AppInstance.cachePageMerge(document.location.pathname);
+});
+}
+R9.Analytics.api.trackPageView();
+}
+function selectButtonClickTrackingEvent() {
+}
+R9.Social.FB.verifyLoginStatus();
+R9.Social.Google.verifyLoginStatus();
+R9.Social.Google.Now.getTokenStatus();
+// Setup globals for Google Tag Manager
+dataLayer = window.dataLayer || [];
+(function() {
+var analytics = R9.globals.analytics || [],
+pixelContext = analytics.pixelContext || {},
+isLoggedIn = !true ;
+switch (analytics.vertical) {
+case "flight":
+pixelContext.provider = pixelContext.airline;
+break;
+case "car":
+pixelContext.provider = pixelContext.agency;
+break;
+case "hotel":
+case "packagetour":
+case "deal":
+default:
+pixelContext.provider = pixelContext.brand;
+}
+dataLayer.push({
+vertical: analytics.vertical || R9.globals.vertical,
+locale: R9.globals.locale.loc,
+affiliate: R9.globals.affiliate,
+affiliateskin: R9.globals.affiliateskin,
+experiment: R9.globals.experiment,
+pageId: analytics.pageId,
+subPageId: analytics.subPageId,
+presentation: analytics.presentation || R9.globals.presentation,
+pixelContext: pixelContext,
+isLoggedIn: isLoggedIn
+});
+})();
+jq(function(){
+var input = '';
+var pattern = '38384040373937396665';
+jq(document).keydown(function(event) {
+input += event.keyCode;
+if (input.length > pattern.length) {
+input = input.substr((input.length - pattern.length));
+}
+if (input == pattern) {
+window.open(decodeURIComponent("%68%74%74%70%73%3a%2f%2f%77%77%77%2e%79%6f%75%74%75%62%65%2e%63%6f%6d%2f%77%61%74%63%68%3f%76%3d%64%51%77%34%77%39%57%67%58%63%51"), '_blank');
+input = '';
+event.preventDefault();
+return false;
+}
+});
+});
+var now = new Date();
+var systime = new Date(1444798049624);
+if (Math.abs(now.getTime() - 1444798049624) > 1000 * 60 * 60 * 48) {
+jq('#localTime').html(now.toLocaleString());
+jq('#systemTime').html(systime.toLocaleString());
+jq('#warning_icon').attr("src", "https://a2.r9cdn.net/res/images/a-warning-icon-maroon.gif?v=67b88ff1522f9240336433780dcfc347e28bd837-1");
+jq('#datewarn').show();
+}
+jq(function() {
+updateRoomsAndGuests({"1":"1 room","2":"2 rooms","3":"3 rooms","4":"4 rooms","5":"5 rooms","6":"6 rooms","7":"7 rooms","8":"8 rooms","9":"9+ rooms"}, {"1":"1 guest","2":"2 guests","3":"3 guests","4":"4 guests","5":"5 guests","6":"6 guests","7":"7 guests","8":"8 guests","9":"9 guests","10":"10 guests","11":"11 guests","12":"12 guests","13":"13 guests","14":"14 guests","15":"15 guests","16":"16 guests","17":"17 guests","18":"18 guests","19":"19 guests","20":"20 guests","21":"21 guests","22":"22 guests","23":"23 guests","24":"24 guests","25":"25 guests","26":"26 guests","27":"27 guests","28":"28 guests","29":"29 guests","30":"30 guests","31":"31 guests","32":"32 guests"});
+form = new R9.fd.hotels.Form(jq.extend({"history":[],"useLast":true,"isFullResearchForm":false,"suppressKAYAKCompareToPopup":false,"intentMediaPageId":"hfd","isIntentMediaEnabled":true,"isSmarterTravelEnabled":false,"guests":"2","hasAction":false,"inDate":"10/16/2015","maxRooms":8,"missingLocationMessage":"Please enter a city, hotel name or address.","outDate":"10/18/2015","smartboxMinWidth":420,"smartboxTimeout":100,"smartboxUrl":"/f/smarty","submitOnPost":false,"triggerRoomsChanged":false,"guestsCount":2,"smarterTravelEnabled":false,"intentMediaEnabled":true}, {
+e: document.hotels,
+countTriggersHotelPlanner: 8
+}));
+// ENG-83751
+if (R9App && R9App.AppInstance && R9App.AppInstance.cachedEval) {
+form.fromCacheRefresh();
+}
+var moreFilters = new R9.fd.hotels.filters.FdMoreFilters({});
+});
+jq(function() {
+jq("#destinationDropdownTiles .header").click(function(event) {
+jq(this).closest(".destinationDropdownTile").toggleClass("photoView");
+});
+});
+jq(".destinationDropdownTileS14 .footer .footerOpener").click(function(event) {
+jq(this).closest(".destinationDropdownTileS14").toggleClass("photoView");
+});
+jq(function() {
+var pm = {'bb': 'Desktop', 'mb' : 'Mobile', 'tb' : 'Tablet'};
+window.IntentMediaProperties = {page_id: "hfd",
+site_name: R9.globals.intentMediaSiteName || "KAYAK",
+site: R9.globals.intentMediaSiteName || "KAYAK",
+site_language: R9.globals.locale.lc || "en",
+site_country: R9.globals.locale.lc_cc || "US",
+site_currency: "USD",
+device_format_type: pm[R9.globals.platform] || "Desktop"
+};
+jq.getScript("\/\/a.cdn.intentmedia.net\/javascripts\/intent_media_kayak.js");
+});
+jq.fn.toggleButtonColorOnTouch = function() {
+return this.each(function() {
+var self = jq(this);
+var background = self.css("background-color");
+var color = self.css("color");
+self.on("touchstart", function() {self.css({"background-color": color, color: background})});
+self.on("touchend", function() {self.css({"background-color": background, color: color})});
+});
+}
+jq(function () {
+jq('<img/>')[0].src = 'https://a1.r9cdn.net/res/images/flippy/a-flippy-hotel-ani.gif?v=2cc3e1bc48867047853aa646553aa01f01cae4d1-1';
+jq('#wherebox').textInput();
+jq('#filterMinStars').dropdown();
+jq('#filterPriceRange').dropdown();
+jq('#rating').dropdown();
+});
+function localTTHidden() {
+popupContinue();
+}
+function popupContinue() {
+toggleFaderPane(false, null);
+if (typeof SearchID == "undefined") {
+document.hotels.submit();
+}
+}
+function getGroopleTrack() {
+return 'kayak';
+}
+var R9LoadFinished = null;
+</script>
+<!-- Blue Kai -->
+<iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:void(0)"></iframe>
+<script>
+jq.getScript("https://tags.bkrtx.com/js/bk-coretag.js", function() {
+// make sure the blue kai code loaded before processing callback
+if (typeof(bk_addPageCtx) === "function" && typeof(bk_doJSTag) == "function") {
+bk_addPageCtx("Product", "hotel");
+bk_allow_multiple_calls=true;
+bk_use_multiple_iframes=true;
+bk_send_statid_payload=true;
+bk_doJSTag(83, 6);
+}
+});
+</script>
+<!-- End Blue Kai -->
 
 
 <!-- Copyright 2004-2015 Kayak Software Corp, All Rights Reserved. -->

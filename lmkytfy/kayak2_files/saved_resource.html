@@ -1,0 +1,175 @@
+
+<!-- saved from url=(0310)https://servedby.flashtalking.com/container/6735;43906;4977;iframe/?U1=undefined&U2=undefined&U3=undefined&U4=undefined&U5=undefined&U6=undefined&U7=undefined&U8=US&U9=USD&U10=https://www.kayak.com/hotels&U11=undefined&U12=hotel&U13=undefined&ft_referrer=https%3A//www.kayak.com/hotels&ns=&cb=81175.84721185267 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><script>var urlHarvest = true;</script><script>var urlHarvest = false;</script> <script>var urlHarvest = false;</script> <img style="width:1px; height:1px;" src="saved_resource(1)"><script type="text/javascript">
+    var action = 'v';
+    var bs = decodeURIComponent("%"+"5C"); //backslash character
+    var segments = {'v':'g9u','c':'g9v','p':'g9w'}
+    var flightPtn = new RegExp('flights'+bs+'/('+bs+'w{3}-'+bs+'w{3})'+bs+'/');
+    function init()
+    {
+       var route = getQueryVars(location.href,'U12');
+        if(route === 'flight'){ 
+            var route = getQueryVars(location.href,'U1') + "_" + getQueryVars(location.href,'U2');
+            //var route = getRouteFromURL();
+            var depart = getQueryVars(location.href,'U3');
+            var arrive = getQueryVars(location.href, 'U4');
+            depart = depart.replace('-','');
+            depart = depart.replace('-','');
+            arrive = arrive.replace('-','');
+            arrive = arrive.replace('-','');
+            if(route == '') return false;
+            route = route+'_'+depart+'_'+arrive;
+            if(route.indexOf("undefined")>-1){ 
+                segments = {'v':'hhd'};
+                route = '';
+            }
+            fireRouteSegment(route, action, segments[action]);
+        }else if(route==='hotel'){
+            var cityID = getQueryVars(location.href, 'U2');
+            var checkIn = getQueryVars(location.href,'U3');
+            var checkOut = getQueryVars(location.href,'U4');
+            var hotelID = getQueryVars(location.href,'U11');
+            checkIn = checkIn.replace('-','');
+            checkIn = checkIn.replace('-','');
+            checkOut = checkOut.replace('-','');
+            checkOut = checkOut.replace('-','');
+            ctid = cityID+'_'+checkIn+'_'+checkOut;
+            if(ctid.indexOf("undefined")>-1) return false;
+            segments = {'v':'g95','c':'g96','p':'g97'};
+            if(hotelID == ''){
+                fireRouteSegment(ctid,action,segments[action]);
+            }else{
+                segments = {'v':'hca'};
+                fireRouteSegment(hotelID+'_'+checkIn+'_'+checkOut+'_'+cityID,action,segments[action]);
+            }        
+       }else if(route =='car'){
+            segments = {'v':'hwf'};
+            var depart = getQueryVars(location.href,'U3');
+            var arrive = getQueryVars(location.href,'U4');
+            var carType = getQueryVars(location.href,'U13');
+            depart = depart.replace('-','');
+            depart = depart.replace('-','');
+            arrive = arrive.replace('-','');
+            arrive = arrive.replace('-','');
+            //if car click, carType is not undefined
+            if(carType.indexOf("undefined")==-1){
+                segments ={'v':'h3h'};
+                var originCode = getAirportCode('ns');
+                segmentValue = originCode+"_"+depart+"_"+arrive + "_"+carType;;
+            }else{
+                var originCode = getAirportCode('U10');
+                segmentValue = originCode+"_"+depart+"_"+arrive;
+            }
+            if(segmentValue.indexOf("undefined")>-1){ 
+                segments = {'v':'h3b'};
+            }
+            fireRouteSegment(segmentValue,action,segments[action]);
+        }
+    }
+    function fireRouteSegment(route, action, segment){
+        var pxl = new Image();
+                if(segment == 'hca'){
+            pxl.src = location.protocol+'//servedby.flashtalking.com/segment/modify/'+segment+'-'+segment+route+';g95;pixel/?valuePairs=;g95_'+action+'&setTime=0;0&granularity=day;day';
+        }else if(segment == 'g95'){
+            pxl.src = location.protocol+'//servedby.flashtalking.com/segment/modify/'+segment+'-'+segment+route+';hca;pixel/?valuePairs=;g95_'+action+'&setTime=0;0&granularity=day;day';
+        }else if(segment == 'hhd' || segment== 'h3b'){
+            pxl.src = location.protocol+'//servedby.flashtalking.com/segment/modify/'+segment+';;pixel/?';
+        }
+        else{
+            pxl.src = location.protocol+'//servedby.flashtalking.com/segment/modify/'+segment+'-'+segment+route+';;pixel/?valuePairs=;'+segment+'_'+action+'&setTime=0;0&granularity=day;day';
+        }
+    }
+    function getAirportCode(uvar){
+        var refer = getQueryVars(location.href,uvar);
+        if(refer.indexOf('undefined')>-1) return;
+        refer = refer.split("/");
+        var codes = refer[4];
+        result = codes.split("-")[0];
+        return result;
+    }
+    function getRoute(){
+        var refer = getQueryVars(location.href, 'U10');
+        if(refer=='') return '';
+        if(refer.indexOf("hotel") > -1){
+            return 'hotel';
+        }
+        if(refer.indexOf("flight") > -1){
+            return 'flight';
+        }
+        var matches = refer.match(flightPtn);
+        if(matches == null) return '';
+        var route = matches[1].split('-').join('_');
+        return route.toLowerCase();
+    }
+    function getQueryVars(url, qp) {
+        var matches = new RegExp(".+?"+bs+bs+"?.*?(" + qp + ")=(.*?)(&|$)", 'i').exec(url);
+        return matches != null ? matches[2] : "";
+    }
+    function getSegmentValue(seg)
+    {
+        var ptn = new RegExp("^.+?segment="+bs+"((.+?)"+bs+")"+bs+"|.+?$");
+        var matches = document.cookie.match(ptn);
+        if(matches == null) return '';
+        var segs = matches[1];
+        var ptn = new RegExp("(^|,)("+seg+")([a-zA-Z0-9_]+?)(-|,|$)");
+        var val = segs.match(ptn);
+        if(val == null) return '';
+        return val[3];
+    }
+    function getGUID(){
+        var ptn = new RegExp('(?:GUID=)(.+?)(?:'+bs+'||")');
+        var matches = document.cookie.match(ptn);
+        return matches != null ? matches[1] : "";
+    }
+    init();
+</script><script>
+var ft_hSeg = {
+		ref_url:document.referrer,
+		ref_protocol:'',
+		ref_domain:'',
+		ref_path:'',
+		ref_queryStr:'',
+		spot_gID:4977,
+		seg_set_QStr:false,
+		seg_uri:'',
+		seg_dom:'',
+		ad_domains:['servedby.flashtalking.com','servedby.flashtalking.com'],
+		parseUri:function(str){
+						var o = this,
+							splitObj = /^(http[s]?):\/\/?([^\/\s]+)\/([\w\.]+[^#?;\s]+)(.*)?/.exec(str);
+							if(splitObj===null) return false;
+						var retObj = {
+									protocol:splitObj[1],
+									domain:splitObj[2],
+									path:splitObj[3],
+									queryString:splitObj[4]
+									}
+						return retObj;
+				},
+		set_seg:function(run){
+		                        if(run == false) { return false };
+								var	split_obj = this.parseUri(this.check_ref(this.ref_url)),
+									seg_path = '/segment/2/read/a;;pixel/?s='+this.spot_gID+'&d=';
+								if(split_obj===false) return false;
+								this.ref_protocol = split_obj.protocol;
+								this.ref_domain = split_obj.domain;
+								this.ref_queryStr = split_obj.queryString;
+								this.ref_path = split_obj.path.replace(new RegExp(decodeURIComponent('%5E/%7C/%24/g')), '');
+								this.seg_dom = this.ad_domains[(this.ref_protocol == 'http')? 0 : 1];
+								this.seg_uri = this.ref_protocol+'://'+this.seg_dom+seg_path+this.ref_domain+'&r='+this.ref_path+(this.seg_set_QStr?'&q='+decodeURIComponent(this.ref_queryStr):'');
+								new Image().src=this.seg_uri;
+								return true;
+						},
+		check_ref:function(url){
+            var st=window.location.search.indexOf('ft_referrer=')+12,
+                en=(window.location.search.substring(st)).indexOf('&ns=');
+                cont_ref = decodeURIComponent(window.location.search.substring(st,en+st));
+            if (url === ''|| this.ref_url !== cont_ref){
+                return  cont_ref;
+            }else{
+                return this.ref_url;
+            }
+		}
+	};
+		ft_hSeg.set_seg(urlHarvest);
+</script></body></html>

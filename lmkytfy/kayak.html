@@ -338,18 +338,15 @@ to ensure it is enabled. &lt;/div&gt;
 </div>
 <div class="clear"></div>
 </div> </div>
-<div class="cmp2Block blockTopSeparator compareToHidden" id="compareToRow">
+<div class="instructions" id="compareToRow" style="
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    font-size: large;
+">
+  <span>Let Me Kayak That For You...</span>
+  </div>
 <input type="hidden" id="c2s" name="c2s" value="PRICELINEPRECHE_US_HFDCMP2|7305254|1|-1|0|1|1;HOTWIREPRECHECK_US_HFDCMP2|8500597|1|-1|0|1|2;BDCUSHBPRECHROME_US_HFDCMP2|5217931|1|-1|0|1|3;BDCUSLBPRECHROME_US_HFDCMP2|5217930|1|-1|0|1|4;BOOKINGDOTCOMUSB3CHR_US_HFDCMP2|5217929|1|-1|0|1|5;BOOKIT_US_HFDCMP2|9486461|0|-1|0|0|6;CAESARSLVMFD_US_HFDCMP2|9924152|0|-1|0|0|7;CHEAPCTIER1_US_HFDCMP2|9151376|0|-1|0|0|8;BOOKITHTLFDCMP2TIER2_US_HFDCMP2|9923841|0|-1|0|0|9;VEGASCOMFD_US_HFDCMP2|9348147|0|-1|0|0|10;CHEAPCARIBBEAN_US_HFDCMP2|7243061|0|-1|0|0|11;HDCTIER3_US_HFDCMP2|9404864|0|-1|0|0|12;AQUACMP2FD_US_HFDCMP2|9924111|0|-1|0|0|13;ASTONCMP2FD_US_HFDCMP2|9924110|0|-1|0|0|14;APPLEFDCMP2HTL_US_HFDCMP2|9904734|0|-1|0|0|15;BARCELOFD_US_HFDCMP2|5218245|0|-1|0|0|16;TRAVELOCITYTIER2_US_HFDCMP2|8765715|0|-1|0|0|17;LEXYL29TEST_US_HFDCMP2|8020921|0|-1|0|0|18;EXTENDEDSTAY_US_HFDCMP2|9923524|0|-1|0|0|19;HDCTIER4_US_HFDCMP2|9404865|0|-1|0|0|20;WOODSPRINGHTLCMP2FD_US_HFDCMP2|5217690|0|-1|0|0|21;TRAVELOCITYTIER1_US_HFDCMP2|8765714|0|-1|0|0|22;LEXYLINTL_US_HFDCMP2|9907096|0|-1|0|0|23;TRAVELOCITYTIER3_US_HFDCMP2|8765716|0|-1|0|0|24;EXPEDIAUNCHECK_US_HFDCMP2|5194428|0|-1|0|0|25;HOTWIRELOS1_US_HFDCMP2|9923461|0|-1|0|0|26;HOTWIREDTA1_US_HFDCMP2|5179593|0|-1|0|0|27;HDCTIER1_US_HFDCMP2|9404861|0|-1|0|0|28;HDCTIER2_US_HFDCMP2|9404862|0|-1|0|0|29;HOTWIRELOS2_US_HFDCMP2|9923462|0|-1|0|0|30;AGODACMP2_US_HFDCMP2|5215768|0|-1|0|0|31;HOTWIREDTA3_US_HFDCMP2|5179595|0|-1|0|0|32;PRICELINEINTL_US_HFDCMP2|5206151|0|-1|0|0|33;HOTWIREDTA2_US_HFDCMP2|5179594|0|-1|0|0|34;TCITYINTERNATIONAL_US_HFDCMP2|8802598|0|-1|0|0|35;VILLASFDCMP2US_US_HFDCMP2|5216706|0|-1|0|0|36">
-<div class="title comparetoTitle ">
-Compare vs. KAYAK 
-<span id="compareToControls" class="CompareTo-Controls">
-<span id="compareALL">
-<span class="fauxlink compareAll check-all">all</span>
-<span class="bar-separator">|</span>
-<span class="fauxlink compareNone">none</span>
-</span>
-</span>
-</div>
 <div id="compareToCheckboxes" class="compareToCheckboxes"></div>
 <script id="CMP2ItemTemplateNone" type="text/x-dot-template">
 <span class="span-button-wrapper">
@@ -2000,4 +1997,19 @@ var e=0<window.navigator.userAgent.indexOf("MSIE "),a="frontdoor";d(f());d(g())}
 <script type="text/javascript" id="">twttr.conversion.trackPid("undefined");</script>
 <noscript>
 &lt;img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=undefined&amp;amp;p_id=Twitter"&gt;
-&lt;img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=undefined&amp;amp;p_id=Twitter"&gt;</noscript><div id="mid-container" style="position: absolute; top: -1000px; left: -1000px;"><canvas width="100" height="100"></canvas></div><iframe src="./kayak2_files/iframe.html" style="visibility: hidden; display: none;"></iframe></body></html>
+&lt;img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=undefined&amp;amp;p_id=Twitter"&gt;</noscript><div id="mid-container" style="position: absolute; top: -1000px; left: -1000px;"><canvas width="100" height="100"></canvas></div><iframe src="./kayak2_files/iframe.html" style="visibility: hidden; display: none;"></iframe>
+
+<img id="fakemouse" src="fakemouse.png" style="top: 0px; left: 0px;float: left;position: absolute;display:none;z-index: 99999;">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="kayak.js"></script>
+
+<script>
+	searchString = getURLParameterByName("s");
+	if (searchString) {
+		setTimeout(function(){
+			kayakItForThem(searchString);
+		},700);
+	}
+</script>
+
+</body></html>

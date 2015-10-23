@@ -50,10 +50,10 @@
   function instruct(step){
     var msg="";
     switch(step) {
-      case:"step_1":
+      case "step_1":
         msg="Enter Your Destination";
         break;
-      case:"step_2":
+      case "step_2":
         msg="Click Search"
         break;
       default:
